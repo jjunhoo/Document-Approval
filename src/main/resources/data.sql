@@ -1,0 +1,29 @@
+-- 문서 Table > Data
+INSERT INTO	documents(document_id,	title,	content, classification, document_approval_status, create_id, create_date, update_id, update_date) VALUES (1, '[1] - 문서', '문서 내용 - 1', '공문', 'REJECT', 'user1', '2021-10-11 01:50:22', 'user1', '2021-10-11 01:50:22');
+INSERT INTO	documents(document_id,	title,	content, classification, document_approval_status, create_id, create_date, update_id, update_date) VALUES (2, '[2] - 문서', '문서 내용 - 2', '휴가', 'ING', 'user1', '2021-10-11 01:54:32', 'user1', '2021-10-11 01:54:32');
+INSERT INTO	documents(document_id,	title,	content, classification, document_approval_status, create_id, create_date, update_id, update_date) VALUES (3, '[3] - 문서', '문서 내용 - 3', '요청', 'ING', 'user1', '2021-10-12 01:54:33', 'user1', '2021-10-12 01:54:33');
+INSERT INTO	documents(document_id,	title,	content, classification, document_approval_status, create_id, create_date, update_id, update_date) VALUES (4, '[4] - 문서', '문서 내용 - 4', '요청', 'ING', 'user1', '2021-10-12 02:24:23', 'user1', '2021-10-12 02:44:23');
+
+-- 문서 결재 Table > Data
+-- 결재한 문서
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (1, 1, 1, 'COMPLETE', 'user1', '테스터1', '승인합니다', 'user1','2021-10-11 02:00:01', 'user1', '2021-10-11 02:00:01');
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (2, 1, 2, 'REJECT', 'user30', '테스터30', '거절합니다', 'user1', '2021-10-11 02:00:01', 'user1', '2021-10-11 02:00:01');
+-- 결재할 문서
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (3, 2, 1, 'COMPLETE', 'user40', '테스터40', '', 'user2', '2021-10-11 02:02:02', 'user2', '2021-10-11 02:02:02');
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (4, 2, 2, 'NONE', 'user1', '테스터1', '', 'user2', '2021-10-11 02:02:02', 'user2', '2021-10-11 02:02:02');
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (5, 2, 3, 'NONE', 'user20', '테스터20', '', 'user2', '2021-10-11 02:02:02', 'user2', '2021-10-11 02:02:02');
+-- 결재 문서
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (6, 3, 1, 'NONE', 'user30', '테스터30', '', 'user1', '2021-10-11 02:02:02', 'user1', '2021-10-11 02:02:02');
+-- 결재할 문서
+INSERT INTO	documents_approval(document_approval_id, document_id, document_approval_order, document_approval_status, document_approver_id, document_approver_name, document_approval_opinion, create_id, create_date, update_id, update_date) VALUES (7, 4, 1, 'NONE', 'user1', '테스터1', '', 'user1', '2021-10-12 02:22:02', 'user1', '2021-10-11 02:22:02');
+
+-- 사용자 정보 Table > Data
+-- 패스워드 123
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user1', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터1', 'Y', 'user1', '2021-10-12 15:00:00', 'user1', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user2', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터2', 'Y', 'user2', '2021-10-12 15:00:00', 'user2', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user3', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터3', 'Y', 'user3', '2021-10-12 15:00:00', 'user3', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user4', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터4', 'Y', 'user4', '2021-10-12 15:00:00', 'user4', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user10', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터10', 'Y', 'user10', '2021-10-12 15:00:00', 'user10', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user20', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터20', 'Y', 'user20', '2021-10-12 15:00:00', 'user20', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user30', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터30', 'Y', 'user30','2021-10-12 15:00:00', 'user30', '2021-10-12 15:00:00');
+INSERT INTO	user_info(user_id, password, user_name, use_yn, create_id, create_date, update_id, update_date) VALUES ('user40', '$2a$10$Qj7iGITxOWpXx/MpPlfnxeSOyYsbijcwKtS9cjiQMrO9AObQjVIDm', '테스터40', 'Y', 'user40', '2021-10-12 15:00:00', 'user40', '2021-10-12 15:00:00');
